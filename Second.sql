@@ -3,9 +3,11 @@ CREATE TABLE Employee (
     EName VARCHAR(25) NOT NULL,
     Job VARCHAR(25) NOT NULL,
     ManagerNo INT,
-    Salary DECIMAL(10, 2) NOT NULL,
-    Commission DECIMAL(10, 2)
+    Salary DECIMAL(10, 2) NOT NULL
 );
+
+ALTER TABLE Employee
+ADD COLUMN Commission DECIMAL(10, 2);
 
 INSERT INTO Employee (EmpNo, EName, Job, ManagerNo, Salary, Commission)
 VALUES
